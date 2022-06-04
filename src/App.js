@@ -4,19 +4,35 @@ import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Cart from "./pages/Cart";
 import ErrorPage from "./pages/ErrorPage";
+import { useState, useEffect } from "react";
+import { productsContext } from "./contexts/productsContext";
 
 const App = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch("http://localhost:3001/items");
+      const data = await response.json();
+      setProducts(data);
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div>
-      <BrowserRouter>
-        <NavigationHeader />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="products" element={<Products />} />
-          <Route path="cart" element={<Cart />} />
-          <Route path="*" element={<ErrorPage />} />
-        </Routes>
-      </BrowserRouter>
+      <productsContext.Provider value={{ products, setProducts }}>
+        <BrowserRouter>
+          <NavigationHeader />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="products" element={<Products />} />
+            <Route path="cart" element={<Cart />} />
+            <Route path="*" element={<ErrorPage />} />
+          </Routes>
+        </BrowserRouter>
+      </productsContext.Provider>
     </div>
   );
 };
