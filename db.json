@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "item": "Milk",
+      "price": "3.64"
+    },
+    {
+      "id": 2,
+      "item": "Bread",
+      "price": "1.48"
+    },
+    {
+      "id": 3,
+      "item": "Eggs",
+      "price": "2.52"
+    },
+    {
+      "id": 4,
+      "item": "Water",
+      "price": "1.08"
+    },
+    {
+      "id": 5,
+      "item": "Peanuts",
+      "price": "4.23"
+    },
+    {
+      "id": 6,
+      "item": "Oats",
+      "price": "1.76"
+    }
+  ]
+}
