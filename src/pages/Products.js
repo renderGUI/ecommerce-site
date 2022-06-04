@@ -9,7 +9,12 @@ const Products = () => {
       <h1>PRODUCTS PAGE</h1>
       {products.map((product) => {
         return (
-          <Product item={product.item} price={product.price} key={product.id} />
+          <Product
+            item={product.item}
+            price={product.price}
+            id={product.id}
+            key={product.id}
+          />
         );
       })}
     </div>

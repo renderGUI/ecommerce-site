@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavigationHeader from "./components/NavigationHeader";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
+import ProductDetails from "./components/products-page/ProductDetails";
 import Cart from "./pages/Cart";
 import ErrorPage from "./pages/ErrorPage";
 import { useState, useEffect } from "react";
@@ -28,6 +29,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="products" element={<Products />} />
+            <Route path="/products/:productId" element={<ProductDetails />} />
             <Route path="cart" element={<Cart />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
