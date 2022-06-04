@@ -13,9 +13,13 @@ const App = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("http://localhost:3001/items");
-      const data = await response.json();
-      setProducts(data);
+      try {
+        const response = await fetch("http://localhost:3001/items");
+        const data = await response.json();
+        setProducts(data);
+      } catch {
+        throw new Error("Something went wrong!");
+      }
     };
 
     fetchData();
