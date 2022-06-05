@@ -10,6 +10,7 @@ import { productsContext } from "./contexts/productsContext";
 
 const App = () => {
   const [products, setProducts] = useState([]);
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,7 +28,9 @@ const App = () => {
 
   return (
     <div>
-      <productsContext.Provider value={{ products, setProducts }}>
+      <productsContext.Provider
+        value={{ products, setProducts, cart, setCart }}
+      >
         <BrowserRouter>
           <NavigationHeader />
           <Routes>
