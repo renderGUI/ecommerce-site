@@ -1,32 +1,23 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { productsContext } from "../../contexts/productsContext";
+import { useNavigate } from "react-router-dom";
 
-const AddToCartButton = () => {
-  const [quantity, setQuantity] = useState(0);
+const AddToCartButton = (props) => {
+  const { cart, setCart } = useContext(productsContext);
+  const navigate = useNavigate();
 
   const addToCartHandler = (e) => {
     e.preventDefault();
-  };
-
-  const changeQuantityHandler = (e) => {
-    setQuantity(e.target.value);
+    setCart(cart.concat(props.product));
+    navigate("/cart");
   };
 
   return (
-    <form onSubmit={addToCartHandler}>
-      <select onChange={changeQuantityHandler}>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-      </select>
-      <button type="submit">Add to cart</button>
-    </form>
+    <div>
+      <button type="button" onClick={addToCartHandler}>
+        Add to cart
+      </button>
+    </div>
   );
 };
 

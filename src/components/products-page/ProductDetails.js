@@ -35,7 +35,7 @@ const ProductDetails = () => {
         mollit anim id est laborum.
       </p>
       <p>{product.price}</p>
-      <AddToCartButton />
+      <AddToCartButton product={product} />
     </div>
   );
 };
