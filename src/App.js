@@ -29,7 +29,12 @@ const App = () => {
   return (
     <div>
       <productsContext.Provider
-        value={{ products, setProducts, cart, setCart }}
+        value={{
+          products,
+          setProducts,
+          cart,
+          setCart,
+        }}
       >
         <BrowserRouter>
           <NavigationHeader />
