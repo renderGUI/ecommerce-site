@@ -29,7 +29,7 @@ const Cart = () => {
             />
           );
         })}
-      {itemsInCart.length > 0 && <CheckoutButton />}
+      {itemsInCart.length > 0 && <CheckoutButton itemsInCart={itemsInCart} />}
     </div>
   );
 };

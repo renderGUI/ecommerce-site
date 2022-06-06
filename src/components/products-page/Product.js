@@ -9,7 +9,7 @@ const Product = (props) => {
   return (
     <div onClick={viewDetailsHandler}>
       <h2>{props.item}</h2>
-      <p>{props.price}</p>
+      <p>${props.price}</p>
     </div>
   );
 };

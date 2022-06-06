@@ -4,7 +4,7 @@
       "id": 1,
       "item": "Milk",
       "price": 3.64,
-      "inCart": true
+      "inCart": false
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "id": 3,
       "item": "Eggs",
       "price": 2.52,
-      "inCart": true
+      "inCart": false
     },
     {
       "id": 4,

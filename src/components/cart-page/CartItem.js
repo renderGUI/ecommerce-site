@@ -26,7 +26,7 @@ const CartItem = (props) => {
   return (
     <div>
       <p>{props.item}</p>
-      <p>{props.price}</p>
+      <p>${props.price}</p>
       <button onClick={removeFromCartHandler}>x</button>
     </div>
   );
