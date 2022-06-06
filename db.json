@@ -3,37 +3,37 @@
     {
       "id": 1,
       "item": "Milk",
-      "price": "3.64",
-      "inCart": false
+      "price": 3.64,
+      "inCart": true
     },
     {
       "id": 2,
       "item": "Bread",
-      "price": "1.48",
+      "price": 1.48,
       "inCart": false
     },
     {
       "id": 3,
       "item": "Eggs",
-      "price": "2.52",
-      "inCart": false
+      "price": 2.52,
+      "inCart": true
     },
     {
       "id": 4,
       "item": "Water",
-      "price": "1.08",
+      "price": 1.08,
       "inCart": false
     },
     {
       "id": 5,
       "item": "Peanuts",
-      "price": "4.23",
+      "price": 4.23,
       "inCart": false
     },
     {
       "id": 6,
       "item": "Oats",
-      "price": "1.76",
+      "price": 1.76,
       "inCart": false
     }
   ]
