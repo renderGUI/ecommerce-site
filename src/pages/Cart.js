@@ -9,35 +9,27 @@ const Cart = () => {
 
   const itemsInCart = products.filter((product) => {
     return product.inCart === true;
-  })
+  });
 
   return (
     <div>
       <h1>Shopping Cart</h1>
       <ContinueShoppingButton />
 
-
-      {/* {localStorage.getItem('cart').length === 0 && <p>Your cart is currently empty!</p>}
-      {localStorage.getItem('cart').length > 0 &&
-        cart.map((product) => {
+      {itemsInCart.length === 0 && <p>Your cart is currently empty!</p>}
+      {itemsInCart.length > 0 &&
+        itemsInCart.map((product) => {
           return (
             <CartItem
+              product={product}
               item={product.item}
               price={product.price}
+              id={product.id}
               key={product.id}
             />
           );
         })}
-      {cart.length > 0 && <CheckoutButton cart={cart} />} */}
-      {itemsInCart.map((product) => {
-        return (
-          <CartItem
-            item={product.item}
-            price={product.price}
-            key={product.id}
-          />
-        );
-      })}
+      {itemsInCart.length > 0 && <CheckoutButton />}
     </div>
   );
 };

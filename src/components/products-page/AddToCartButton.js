@@ -1,7 +1,10 @@
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { productsContext } from "../../contexts/productsContext";
 
 const AddToCartButton = (props) => {
   const navigate = useNavigate();
+  const { setProducts } = useContext(productsContext);
 
   const addToCartHandler = async (e) => {
     e.preventDefault();
@@ -22,6 +25,14 @@ const AddToCartButton = (props) => {
       );
       const data = await response.json();
       console.log(data);
+
+      fetch("http://localhost:3001/items")
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          setProducts(data);
+        });
 
       navigate("/cart");
     }
