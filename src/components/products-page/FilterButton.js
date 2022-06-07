@@ -1,21 +1,18 @@
-const FilterButton = () => {
+const FilterButton = (props) => {
   const filterChangeHandler = (e) => {
-    console.log(e.target.value);
+    props.setFilterType(e.target.value);
   };
   return (
     <>
-      <select onChange={filterChangeHandler} defaultValue="none">
-        <option value="none" disabled hidden>
+      <select onChange={filterChangeHandler} defaultValue="default">
+        <option value="default" disabled>
           filter
         </option>
-        <option value="ascending">Lowest to highest</option>
-        <option value="descending">Highest to lowest</option>
+        <option value="ascending">lowest to highest</option>
+        <option value="descending">highest to lowest</option>
       </select>
     </>
   );
 };
 
 export default FilterButton;
-
-// filter from $ to $$$
-// filter from $$$ to $
