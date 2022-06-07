@@ -7,8 +7,6 @@ const Products = () => {
   const { products } = useContext(productsContext);
   const [filterType, setFilterType] = useState("default");
 
-  console.log("product component rendered");
-
   if (filterType === "ascending") {
     products.sort((a, b) => {
       return a.price - b.price;

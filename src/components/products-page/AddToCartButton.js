@@ -1,16 +1,20 @@
 import { useNavigate } from "react-router-dom";
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import { productsContext } from "../../contexts/productsContext";
 
 const AddToCartButton = (props) => {
   const navigate = useNavigate();
   const { setProducts } = useContext(productsContext);
+  const [showLimitMessage, setShowLimitMessage] = useState(false);
 
   const addToCartHandler = async (e) => {
     e.preventDefault();
 
     if (props.product.inCart === true) {
-      console.log("item already in cart");
+      setShowLimitMessage(true);
+      setTimeout(() => {
+        setShowLimitMessage(false);
+      }, 2000);
       return;
     } else {
       const response = await fetch(
@@ -40,9 +44,12 @@ const AddToCartButton = (props) => {
 
   return (
     <div>
-      <button type="button" onClick={addToCartHandler}>
+      <button type="button" onClick={addToCartHandler} disabled={showLimitMessage ? true : false}>
         Add to cart
       </button>
+      <p>
+        {showLimitMessage ? "This product is already in your cart!" : ""}
+      </p>
     </div>
   );
 };
