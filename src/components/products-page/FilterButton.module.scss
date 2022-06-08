@@ -1,0 +1,9 @@
+@use "../../config";
+
+.filterDropdown {
+  color: #ffffff;
+  background-color: config.$secondaryColor;
+  border: none;
+  border-radius: 25px;
+  margin-bottom: 25px;
+}

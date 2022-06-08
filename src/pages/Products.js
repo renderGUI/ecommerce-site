@@ -1,3 +1,4 @@
+import classes from "./Products.module.scss";
 import { productsContext } from "../contexts/productsContext";
 import { useState, useContext } from "react";
 import Product from "../components/products-page/Product";
@@ -21,18 +22,20 @@ const Products = () => {
 
   return (
     <div>
-      <h1>PRODUCTS PAGE</h1>
+      <h2 className={classes.heading}>All Products</h2>
       <FilterButton setFilterType={setFilterType} />
-      {products.map((product) => {
-        return (
-          <Product
-            item={product.item}
-            price={product.price}
-            id={product.id}
-            key={product.id}
-          />
-        );
-      })}
+      <section className={classes.productsContainer}>
+        {products.map((product) => {
+          return (
+            <Product
+              item={product.item}
+              price={product.price}
+              id={product.id}
+              key={product.id}
+            />
+          );
+        })}
+      </section>
     </div>
   );
 };
