@@ -1,3 +1,4 @@
+import classes from "./AddToCartButton.module.scss";
 import { useNavigate } from "react-router-dom";
 import { useState, useContext } from "react";
 import { productsContext } from "../../contexts/productsContext";
@@ -44,12 +45,15 @@ const AddToCartButton = (props) => {
 
   return (
     <div>
-      <button type="button" onClick={addToCartHandler} disabled={showLimitMessage ? true : false}>
+      <button
+        className={classes.btn}
+        type="button"
+        onClick={addToCartHandler}
+        disabled={showLimitMessage ? true : false}
+      >
         Add to cart
       </button>
-      <p>
-        {showLimitMessage ? "This product is already in your cart!" : ""}
-      </p>
+      <p className={classes.limitText}>{showLimitMessage ? "This product is already in your cart!" : ""}</p>
     </div>
   );
 };

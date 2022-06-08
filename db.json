@@ -4,7 +4,7 @@
       "id": 1,
       "item": "Milk",
       "price": 3.64,
-      "inCart": false
+      "inCart": true
     },
     {
       "id": 2,

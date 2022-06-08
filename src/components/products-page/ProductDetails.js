@@ -1,3 +1,4 @@
+import classes from "./ProductDetails.module.scss";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import AddToCartButton from "./AddToCartButton";
@@ -23,9 +24,9 @@ const ProductDetails = () => {
   }, [params.productId]);
 
   return (
-    <div>
+    <div className={classes.container}>
       <h2>{product.item}</h2>
-      <p>
+      <p className={classes.description}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -34,7 +35,7 @@ const ProductDetails = () => {
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </p>
-      <p>${product.price}</p>
+      <p className={classes.price}>${product.price}</p>
       <AddToCartButton product={product} />
     </div>
   );

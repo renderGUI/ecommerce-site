@@ -1,0 +1,24 @@
+@use "../../config";
+
+.btn {
+  background-color: config.$secondaryColor;
+  border: none;
+  font-weight: 600;
+  color: #ffffff;
+  padding: 10px 20px 10px 20px;
+  border-radius: 25px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: darken(config.$secondaryColor, 5%);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: darken(config.$background, 10%);
+  }
+}
+
+.limitText {
+  color: #dd7777;
+}
