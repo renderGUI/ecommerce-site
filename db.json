@@ -35,6 +35,24 @@
       "item": "Oats",
       "price": 1.76,
       "inCart": false
+    },
+    {
+      "id": 7,
+      "item": "Potatoes",
+      "price": 3.24,
+      "inCart": false
+    },
+    {
+      "id": 8,
+      "item": "Pasta",
+      "price": 0.92,
+      "inCart": false
+    },
+    {
+      "id": 9,
+      "item": "Tuna",
+      "price": 0.78,
+      "inCart": false
     }
   ]
 }
