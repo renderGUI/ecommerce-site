@@ -1,3 +1,4 @@
+import classes from "./CartItem.module.scss";
 import { useContext } from "react";
 import { productsContext } from "../../contexts/productsContext";
 
@@ -24,10 +25,10 @@ const CartItem = (props) => {
       });
   };
   return (
-    <div>
-      <p>{props.item}</p>
-      <p>${props.price}</p>
-      <button onClick={removeFromCartHandler}>x</button>
+    <div className={classes.container}>
+      <p className={classes.item}>{props.item}</p>
+      <p className={classes.price}>${props.price}</p>
+      <button className={classes.btn} onClick={removeFromCartHandler}>Remove</button>
     </div>
   );
 };

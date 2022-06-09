@@ -1,0 +1,7 @@
+@use "../config";
+
+.emptyCartMessage {
+  text-align: center;
+  font-weight: 600;
+  color: config.$secondaryColor;
+}

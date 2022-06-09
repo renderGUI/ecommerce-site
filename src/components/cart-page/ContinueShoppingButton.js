@@ -1,3 +1,4 @@
+import classes from "./ContinueShoppingButton.module.scss";
 import { useNavigate } from "react-router-dom";
 
 const ContinueShoppingButton = () => {
@@ -6,8 +7,15 @@ const ContinueShoppingButton = () => {
     navigate("/products");
   };
   return (
-    <div>
-      <button type="button" onClick={viewProductsHandler}>Continue Shopping</button>
+    <div className={classes.container}>
+      <button
+        className={classes.btn}
+        type="button"
+        onClick={viewProductsHandler}
+      >
+        &#x3C; Continue Shopping
+      </button>
+      <h2 className={classes.heading}>Shopping Cart</h2>
     </div>
   );
 };

@@ -1,9 +1,5 @@
 @use "../config";
 
-.heading {
-  color: config.$primaryColor;
-}
-
 .productsContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

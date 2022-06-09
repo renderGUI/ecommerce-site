@@ -1,0 +1,28 @@
+@use "../../config";
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  .item {
+    width: 150px;
+  }
+
+  .price {
+    width: 100px;
+    font-weight: 600;
+  }
+
+  .btn {
+    border: none;
+    background-color: transparent;
+    color: #dd7777;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}

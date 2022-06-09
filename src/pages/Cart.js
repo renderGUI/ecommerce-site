@@ -1,5 +1,7 @@
+import classes from "./Cart.module.scss";
 import { useContext } from "react";
 import { productsContext } from "../contexts/productsContext";
+import CartLabels from "../components/cart-page/CartLabels";
 import CartItem from "../components/cart-page/CartItem";
 import CheckoutButton from "../components/cart-page/CheckoutButton";
 import ContinueShoppingButton from "../components/cart-page/ContinueShoppingButton";
@@ -13,10 +15,9 @@ const Cart = () => {
 
   return (
     <div>
-      <h1>Shopping Cart</h1>
       <ContinueShoppingButton />
-
-      {itemsInCart.length === 0 && <p>Your cart is currently empty!</p>}
+      {itemsInCart.length === 0 && <p className={classes.emptyCartMessage}>Your cart is currently empty!</p>}
+      {itemsInCart.length > 0 && <CartLabels />}
       {itemsInCart.length > 0 &&
         itemsInCart.map((product) => {
           return (

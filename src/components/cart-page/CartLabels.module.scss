@@ -1,0 +1,31 @@
+@use "../../config";
+
+.labelsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: 600;
+  color: config.$primaryColor;
+
+  .itemLabel {
+    width: 150px;
+  }
+
+  .priceLabel {
+    width: 100px;
+  }
+}
+
+hr {
+  width: 90%;
+  border: 1px solid darken(config.$background, 10%);
+  border-radius: 25px;
+}
+
+/** RESPONSIVE DESIGN - DESKTOP **/
+@media screen and (min-width: 1000px) {
+  hr {
+    width: 75%;
+  }
+}
