@@ -1,4 +1,4 @@
-@use './config';
+@use "./config";
 
 body {
   margin: 0;
@@ -6,4 +6,6 @@ body {
   box-sizing: border-box;
   font-family: sans-serif;
   background-color: config.$background;
+  position: relative;
+  min-height: 100vh;
 }

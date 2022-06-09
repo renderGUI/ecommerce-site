@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavigationHeader from "./components/NavigationHeader";
+import NavigationFooter from "./components/NavigationFooter";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import ProductDetails from "./components/products-page/ProductDetails";
@@ -37,6 +38,7 @@ const App = () => {
             <Route path="cart" element={<Cart />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
+          <NavigationFooter />
         </BrowserRouter>
       </productsContext.Provider>
     </div>
