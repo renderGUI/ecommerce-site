@@ -1,8 +1,13 @@
+import classes from "./Home.module.scss";
+
 const Home = () => {
   return (
-    <div>
+    <section className={classes.container}>
       <h1>HOME PAGE</h1>
-    </div>
+      <article>
+        <p>content goes here</p>
+      </article>
+    </section>
   );
 };
 
