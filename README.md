@@ -9,15 +9,18 @@
 
 ## About
 
-Simple eCommerce SPA that uses mock data retrieved from a local database using to display grocery products. The application features the ability to:
+Simple eCommerce SPA that uses JSON data retrieved from a REST API in order to display grocery products. The application features the ability to:
 
 - add items to cart
 - remove items from cart
 - filter items by price
 - calculate a subtotal cost
 
-This application was built using:
+This application uses the following technologies:
 
 - React
 - SASS
 - React Router
+- Fetch API
+- Heroku (for [json-server](https://www.npmjs.com/package/json-server) deployment)
+- Netlify (for application deployment)
