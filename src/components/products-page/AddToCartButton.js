@@ -19,7 +19,7 @@ const AddToCartButton = (props) => {
       return;
     } else {
       const response = await fetch(
-        `http://localhost:3001/items/${props.product.id}`,
+        `https://products-rendergui.herokuapp.com/items/${props.product.id}`,
         {
           method: "PUT",
           headers: {
@@ -31,7 +31,7 @@ const AddToCartButton = (props) => {
       const data = await response.json();
       console.log(data);
 
-      fetch("http://localhost:3001/items")
+      fetch("https://products-rendergui.herokuapp.com/items")
         .then((response) => {
           return response.json();
         })
@@ -53,7 +53,9 @@ const AddToCartButton = (props) => {
       >
         Add to cart
       </button>
-      <p className={classes.limitText}>{showLimitMessage ? "This product is already in your cart!" : ""}</p>
+      <p className={classes.limitText}>
+        {showLimitMessage ? "This product is already in your cart!" : ""}
+      </p>
     </div>
   );
 };

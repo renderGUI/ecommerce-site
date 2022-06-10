@@ -11,7 +11,7 @@ const ProductDetails = () => {
     const fetchProduct = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3001/items/${params.productId}`
+          `https://products-rendergui.herokuapp.com/items/${params.productId}`
         );
         const data = await response.json();
         setProduct(data);

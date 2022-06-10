@@ -15,7 +15,9 @@ const App = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3001/items");
+        const response = await fetch(
+          "https://products-rendergui.herokuapp.com/items"
+        );
         const data = await response.json();
         setProducts(data);
       } catch {
